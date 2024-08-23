@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES2023",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "noImplicitAny": true,
+        "strict": true,
+        "declaration": false,
+        "skipLibCheck": true,
+        "strictNullChecks": true,
+        "resolveJsonModule": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}
