@@ -1,13 +1,24 @@
 import 'dotenv/config';
-import { Client, GatewayIntentBits } from "discord.js";
+import { GatewayIntentBits } from 'discord.js';
+import CustomClient from './CustomClient';
 
-const client = new Client({
-    intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
-});
+const client = new CustomClient(
+    {
+        intents: [
+            GatewayIntentBits.GuildMessages,
+            GatewayIntentBits.MessageContent,
+            GatewayIntentBits.Guilds,
+        ]
+    },
+    process.env.TOKEN as string,
+    process.env.CLIENT_ID as string,
+    process.env.GUILD_ID as string
+);
 
-client.on('ready', () => {
-    console.log(`${client.user?.username} has logged in`);
-});
+(async () => {
+    await client.loadCommands();
+    await client.loadEvents();
+    await client.deployCommands();
+    await client.login();
+})();
 
-
-client.login(process.env.TOKEN);    
