@@ -12,7 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/figlet": "^1.5.8",
     "canvacord": "^5.4.10",
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
@@ -20,7 +19,9 @@
     "jumble-words": "^1.0.1"
   },
   "devDependencies": {
+    "@types/figlet": "^1.5.8",
     "@types/node": "^22.5.0",
-    "tsx": "^4.17.0"
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
   }
 }
