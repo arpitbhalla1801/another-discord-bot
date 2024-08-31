@@ -18,7 +18,6 @@ const client = new CustomClient(
 (async () => {
     await client.loadCommands();
     await client.loadEvents();
-    await client.deployCommands();
     await client.login();
+    // await client.deployCommands();
 })();
-
