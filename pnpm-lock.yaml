@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@tinoschroeter/weather-js':
+        specifier: ^3.0.2
+        version: 3.0.2
       canvacord:
         specifier: ^5.4.10
         version: 5.4.10
@@ -285,6 +288,9 @@ packages:
     resolution: {integrity: sha512-kxu65ZchumEKWnFwPwy+/T2+/lzQZtwK6f5VTG3OJIBqvfdyRyxrWvbeBHT6G8p6nBEuxSwyI3YXTv2koXvHVQ==}
     engines: {node: '>=v14.18.0', npm: '>=7.24.2'}
 
+  '@tinoschroeter/weather-js@3.0.2':
+    resolution: {integrity: sha512-GQkCbWAkvYlza4toDLypOgfHLoDHgnRdc48K+pzMFxbPLwcynIAObKPvRWE93vFtblclVWF3Ni4+2L0e/qLvhQ==}
+
   '@types/figlet@1.5.8':
     resolution: {integrity: sha512-G22AUvy4Tl95XLE7jmUM8s8mKcoz+Hr+Xm9W90gJsppJq9f9tHvOGkrpn4gRX0q/cLtBdNkWtWCKDg2UDZoZvQ==}
 
@@ -368,6 +374,9 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
+  sax@1.4.1:
+    resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
+
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
 
@@ -411,6 +420,14 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+
+  xml2js@0.6.2:
+    resolution: {integrity: sha512-T4rieHaC1EXcES0Kxxj4JWgaUQHDk+qwHcYOCFHfiwKz7tOVPLq7Hjq9dM1WCMhylqMEfP7hMcOIChvotiZegA==}
+    engines: {node: '>=4.0.0'}
+
+  xmlbuilder@11.0.1:
+    resolution: {integrity: sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==}
+    engines: {node: '>=4.0'}
 
 snapshots:
 
@@ -585,6 +602,10 @@ snapshots:
     dependencies:
       tslib: 2.6.2
 
+  '@tinoschroeter/weather-js@3.0.2':
+    dependencies:
+      xml2js: 0.6.2
+
   '@types/figlet@1.5.8': {}
 
   '@types/node@22.5.0':
@@ -688,6 +709,8 @@ snapshots:
 
   resolve-pkg-maps@1.0.0: {}
 
+  sax@1.4.1: {}
+
   tr46@0.0.3: {}
 
   ts-mixer@6.0.4: {}
@@ -715,3 +738,10 @@ snapshots:
       webidl-conversions: 3.0.1
 
   ws@8.18.0: {}
+
+  xml2js@0.6.2:
+    dependencies:
+      sax: 1.4.1
+      xmlbuilder: 11.0.1
+
+  xmlbuilder@11.0.1: {}

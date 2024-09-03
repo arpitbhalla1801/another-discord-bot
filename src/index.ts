@@ -19,5 +19,5 @@ const client = new CustomClient(
     await client.loadCommands();
     await client.loadEvents();
     await client.login();
-    // await client.deployCommands();
+    await client.deployCommands();
 })();
