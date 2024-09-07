@@ -5,6 +5,8 @@ export default {
         .setName('ping')
         .setDescription('Ping command'),
     async execute(interaction: ChatInputCommandInteraction) {
-        await interaction.reply('Pong!');
+        const reply = await interaction.reply({ content: 'Pinging...', fetchReply: true });
+        const wsPing = interaction.client.ws.ping;
+        await interaction.editReply(`API Latency is ${reply.createdTimestamp - interaction.createdTimestamp}ms\nWebsocket Ping is ${wsPing}ms`);
     }
 }
